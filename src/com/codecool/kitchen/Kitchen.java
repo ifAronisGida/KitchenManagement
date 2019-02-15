@@ -33,6 +33,7 @@ public class Kitchen {
             employees.add(cook);
         }
         chef = new Chef(baseSalary, helpers, cooks);
+        employees.add(chef);
     }
 
     public void distributeKnives() {
