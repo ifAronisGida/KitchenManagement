@@ -6,12 +6,15 @@ public class Main {
         Kitchen kitchen = new Kitchen();
         kitchen.hireStaff(10000);
         kitchen.distributeKnives();
+        kitchen.distributeKnives();
+        kitchen.reportTaxes();
 
-        for (int i = 0; i < 4; i++) {
+
+
+        for (int i = 0; i < 5; i++) {
             kitchen.cookSomething(Kitchen.Ingredient.CARROT);
             kitchen.cookSomething(Kitchen.Ingredient.MEAT);
             kitchen.cookSomething(Kitchen.Ingredient.POTATO);
-
         }
     }
 }

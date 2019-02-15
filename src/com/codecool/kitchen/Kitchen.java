@@ -22,9 +22,15 @@ public class Kitchen {
     }
 
     public void hireStaff(int baseSalary) {
+        for (int i = 0; i < 3; i++) {
+            Helper helper = new Helper(baseSalary);
+            helpers.add(helper);
+            employees.add(helper);
+        }
         for (int i = 0; i < 2; i++) {
-            cooks.add(new Cook(baseSalary));
-            helpers.add(new Helper(baseSalary));
+            Cook cook = new Cook(baseSalary);
+            cooks.add(cook);
+            employees.add(cook);
         }
         chef = new Chef(baseSalary, helpers, cooks);
     }
@@ -33,6 +39,12 @@ public class Kitchen {
         chef.getWorkKnife();
         for (Cook cook: cooks) {
             cook.getWorkKnife();
+        }
+    }
+
+    public void reportTaxes() {
+        for (Employee employee: employees) {
+            employee.createTaxReport();
         }
     }
 
